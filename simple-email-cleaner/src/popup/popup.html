@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📧 Email Cleaner</h1>
+    </header>
+    
+    <div class="stats-section">
+      <div class="stat-card">
+        <div class="stat-number" id="total-emails">-</div>
+        <div class="stat-label">Total Emails</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="spam-count">-</div>
+        <div class="stat-label">Spam/Promotional</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="inbox-score">-</div>
+        <div class="stat-label">Inbox Health</div>
+      </div>
+    </div>
+
+    <div class="actions-section">
+      <button id="scan-emails" class="btn btn-primary">
+        🔍 Scan Inbox
+      </button>
+      <button id="clean-emails" class="btn btn-danger" disabled>
+        🗑️ Clean Spam Emails
+      </button>
+      <button id="clean-promotional" class="btn btn-warning" disabled>
+        📢 Clean Promotional
+      </button>
+    </div>
+
+    <div class="results-section" id="results" style="display: none;">
+      <h3>Scan Results</h3>
+      <div id="results-list"></div>
+    </div>
+
+    <div class="status-section">
+      <div id="status">Ready to clean your inbox!</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
